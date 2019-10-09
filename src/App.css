@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+.image-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.image-container img {
+  max-width: 100%;
+}

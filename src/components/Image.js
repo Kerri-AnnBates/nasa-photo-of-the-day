@@ -1,10 +1,9 @@
 import React from 'react';
 
-function Image() {
+function Image(props) {
     return (
         <div className='image-container'>
-            < img src = '#'
-            alt = 'image details' / >
+            < img src={props.imageSrc} alt = 'image details' / >
         </div>
     )
 }
