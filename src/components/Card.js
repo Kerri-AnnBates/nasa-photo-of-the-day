@@ -7,12 +7,12 @@ import Explanation from './Explanation';
 function Card(props) {
     return (
         <div className="card">
+            <Date imageDate={props.data.date} selectTheDate={props.selectDate} />
             <Title photoTitle={props.data.title} />
             <div className="content">
                 <Image imageSrc={props.data.hdurl} />
                 <Explanation imageExp={props.data.explanation} />
-            </div>            
-            <Date imageDate={props.data.date} />
+            </div>
         </div>
     )
 }

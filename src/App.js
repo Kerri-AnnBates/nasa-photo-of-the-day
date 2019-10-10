@@ -5,8 +5,14 @@ import "./App.css";
 
 function App() {
 
+  let today = new Date();
   const [photoData, setPhotoData] = useState({});
-  // const [error, setError] = useState();
+  const [date, setDate] = useState(today);
+  console.log(date);
+  function selectedDate() {
+    let theDate = this.value;
+    setDate(theDate);
+  }
 
   useEffect(() => {
   
@@ -22,8 +28,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>NASA Photo Of The Day</h1>
-      <Card data={photoData} />
+      < div className = "container" >
+        <h1>NASA Photo Of The Day</h1>
+        <Card data={photoData} selectDate={selectedDate}/>
+      </div>
     </div>
   );
 }
