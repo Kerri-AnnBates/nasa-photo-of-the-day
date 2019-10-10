@@ -7,7 +7,7 @@ import Explanation from './Explanation';
 function Card(props) {
     return (
         <div className="card">
-            <Date imageDate={props.data.date} selectTheDate={props.selectDate} />
+            <Date imageDate={props.data.date} selectedDate={props.selectDate} />
             <Title photoTitle={props.data.title} />
             <div className="content">
                 <Image imageSrc={props.data.hdurl} />

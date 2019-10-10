@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Date(props) {
+    let date;
     return (
         <div  className='date-container'>
             <p>Date taken:</p>
@@ -8,7 +9,7 @@ function Date(props) {
                 <p>{props.imageDate}</p>
             </div>
             <div className="date-select">
-                Select a date: <input type="date" id="date-picker" onChange={() => props.selectTheDate()} />
+                Select a date: <input type="date" id="date-picker" onChange={(e) => props.selectedDate(e.target.value)} />
             </div>
         </div>
     )
