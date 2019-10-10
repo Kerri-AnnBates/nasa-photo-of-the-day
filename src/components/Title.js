@@ -1,9 +1,9 @@
 import React from 'react';
-import { CardTitle } from 'reactstrap';
+import { CardTitle, CardHeader } from 'reactstrap';
 
 function Title(props) {
     return (
-        <CardTitle>{props.photoTitle}</CardTitle>
+        <CardHeader>{props.photoTitle}</CardHeader>
     )
 }
 

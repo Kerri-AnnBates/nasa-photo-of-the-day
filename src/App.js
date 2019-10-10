@@ -37,9 +37,13 @@ function App() {
   // Main component.
   return (
     <div className="App">
-      <Container className = "container" >
+      <Container>
         <h1>NASA Photo Of The Day</h1>
-        <Cards data={photoData} selectDate={selectedDate}/>
+        <div className="row">
+          <div className = "col-md-6 offset-md-3" > 
+            <Cards data={photoData} selectDate={selectedDate}/>
+          </div>
+        </div>
       </Container>
     </div>
   );

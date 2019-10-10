@@ -8,16 +8,14 @@ import { Card, CardBody, Row, Col } from 'reactstrap';
 function Cards(props) {
     return (
         <Row>
-            <Col sm='6'>
             <Date imageDate={props.data.date} selectedDate={props.selectDate} />
             <Card>
+                <Title photoTitle={props.data.title} />
                 <CardBody>
-                    <Title photoTitle={props.data.title} />
                     <Image imageSrc={props.data.hdurl} mediaType={props.data.media_type} videoSrc={props.data.url} />
                     <Explanation imageExp={props.data.explanation} />
                 </CardBody>
             </Card>
-            </Col>
         </Row>
     )
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { CardImg } from 'reactstrap';
+import styled from 'styled-components'
+
 function Image(props) {
     return (
         <div className='image-container'>
@@ -9,7 +11,7 @@ function Image(props) {
                 // }
             }
 
-            <CardImg src={props.imageSrc} alt = 'image details'/>
+            <CardImg className="img-fluid" src={props.imageSrc} alt = 'image details'/>
         </div>
     )
 }
