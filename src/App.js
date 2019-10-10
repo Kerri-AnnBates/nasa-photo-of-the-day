@@ -2,8 +2,13 @@ import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import Cards from './components/Card';
 import "./App.css";
-import { Container, Row, Col } from 'reactstrap';
+import { Container } from 'reactstrap';
+import styled from 'styled-components';
 
+//Styles
+const AppHeader = styled.h1`
+  color: #e8e8e8;
+`;
 
 function App() {
 
@@ -38,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <Container>
-        <h1>NASA Photo Of The Day</h1>
+        <AppHeader>NASA Photo Of The Day</AppHeader>
         <div className="row">
           <div className = "col-md-6 offset-md-3" > 
             <Cards data={photoData} selectDate={selectedDate}/>

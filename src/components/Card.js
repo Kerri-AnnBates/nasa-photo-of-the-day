@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Title from './Title';
 import Image from './Image';
 import Date from './Date';
 import Explanation from './Explanation';
-import { Card, CardBody, Row, Col } from 'reactstrap';
+import { Card, CardBody, Row, Collapse, Button } from 'reactstrap';
+
 
 function Cards(props) {
+
     return (
         <Row>
             <Date imageDate={props.data.date} selectedDate={props.selectDate} />
