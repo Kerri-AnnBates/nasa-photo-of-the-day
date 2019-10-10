@@ -1,13 +1,12 @@
 import React from 'react';
+import { CardSubtitle } from 'reactstrap';
 
 function Date(props) {
-    let date;
+
     return (
-        <div  className='date-container'>
-            <p>Date taken:</p>
-            <div className='date'>
-                <p>{props.imageDate}</p>
-            </div>
+        <div className='date-container'>
+            <CardSubtitle>Date taken: {props.imageDate}</CardSubtitle>
+            
             <div className="date-select">
                 Select a date: <input type="date" id="date-picker" onChange={(e) => props.selectedDate(e.target.value)} />
             </div>

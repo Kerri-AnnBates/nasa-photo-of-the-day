@@ -1,10 +1,9 @@
 import React from 'react';
+import { CardTitle } from 'reactstrap';
 
 function Title(props) {
     return (
-        <div className="title">
-            <h2>{props.photoTitle}</h2>
-        </div>
+        <CardTitle>{props.photoTitle}</CardTitle>
     )
 }
 

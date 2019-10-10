@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
-import Card from './components/Card';
+import Cards from './components/Card';
 import "./App.css";
+import { Container, Row, Col } from 'reactstrap';
+
 
 function App() {
 
@@ -13,12 +15,13 @@ function App() {
   const [photoData, setPhotoData] = useState({});
   const [date, setDate] = useState(dateString);
 
-  console.log(date);
+  // console.log(date);
   function selectedDate(theDate) {
 
     setDate(theDate);
   }
 
+  //API call.
   useEffect(() => {
   
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=q0FN7OgOMiUeG3yIFM9CewxN6olZq5ASzUGFAbcb&date=${date}`)
@@ -31,12 +34,13 @@ function App() {
     })
   }, [date]);
 
+  // Main component.
   return (
     <div className="App">
-      < div className = "container" >
+      <Container className = "container" >
         <h1>NASA Photo Of The Day</h1>
-        <Card data={photoData} selectDate={selectedDate}/>
-      </div>
+        <Cards data={photoData} selectDate={selectedDate}/>
+      </Container>
     </div>
   );
 }

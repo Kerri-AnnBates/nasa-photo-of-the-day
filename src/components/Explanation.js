@@ -1,11 +1,9 @@
 import React from 'react';
-
+import { CardText } from 'reactstrap';
 
 function Explanation(props) {
     return (
-        <div className="explanation">
-            <p>{props.imageExp}</p>
-        </div>
+        <CardText>{props.imageExp}</CardText>
     )
 }
 
