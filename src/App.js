@@ -12,10 +12,10 @@ const AppHeader = styled.h1`
 
 function App() {
 
-  let today = new Date();
-  let formattedDay = ('0' + today.getDate()).slice(-2);
-  let formattedMonth = ('0' + (today.getMonth()+1)).slice(-2);
-  let dateString = `${today.getFullYear()}-${formattedMonth}-${formattedDay}`;
+  const today = new Date();
+  const formattedDay = ('0' + today.getDate()).slice(-2);
+  const formattedMonth = ('0' + (today.getMonth()+1)).slice(-2);
+  const dateString = `${today.getFullYear()}-${formattedMonth}-${formattedDay}`;
   
   const [photoData, setPhotoData] = useState({});
   const [date, setDate] = useState(dateString);
